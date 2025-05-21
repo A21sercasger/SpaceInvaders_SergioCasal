@@ -521,7 +521,7 @@ public class Main extends ApplicationAdapter {
         if (timeSinceLastEnemy >= enemySpawnCooldown) {
             timeSinceLastEnemy = 0f;
             float x = (float)Math.random() * (SCREEN_WIDTH - 64);
-            if (score >= 100) {
+            if (score >= 50) {
                 if (Math.random() < 0.7) {
                     enemies2.add(new Enemy2(x, SCREEN_HEIGHT, enemy2Texture));
                 } else {
@@ -532,7 +532,7 @@ public class Main extends ApplicationAdapter {
             }
         }
 
-        if (score >= 200 && boss == null) {
+        if (score >= 100 && boss == null) {
             boss = new Boss(bossTexture);
             enemies.clear();
             enemies2.clear();
